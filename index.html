@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaazoon.com - Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <a href="#" class="logo">Amaazoon</a>
+            
+            <div class="delivery-location">
+                <div>Deliver to</div>
+                <div><strong>Pakistan</strong></div>
+            </div>
+
+            <div class="search-container">
+                <select class="search-dropdown">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Books</option>
+                    <option>Fashion</option>
+                    <option>Home</option>
+                </select>
+                <input type="text" class="search-input" placeholder="Search Amaazoon">
+                <button class="search-button">🔍</button>
+            </div>
+
+            <div class="header-right">
+                <a href="#" class="header-link">
+                    <div>Hello, sign in</div>
+                    <div><strong>Account & Lists</strong></div>
+                </a>
+                
+                <a href="#" class="header-link">
+                    <div>Returns</div>
+                    <div><strong>& Orders</strong></div>
+                </a>
+
+                <a href="#" class="header-link cart">
+                    <span>🛒</span>
+                    <span>Cart</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <a href="#" class="nav-link">☰ All</a>
+            <a href="#" class="nav-link">Today's Deals</a>
+            <a href="#" class="nav-link">Customer Service</a>
+            <a href="#" class="nav-link">Registry</a>
+            <a href="#" class="nav-link">Gift Cards</a>
+            <a href="#" class="nav-link">Sell</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Gateway to Everything</h1>
+            <p>Discover millions of products, incredible deals, and fast delivery - all in one place</p>
+            <button class="hero-cta" onclick="scrollToDeals()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="selectCategory('electronics')">
+                <div class="category-icon">📱</div>
+                <h3>Electronics</h3>
+                <p>Latest gadgets and tech</p>
+            </div>
+            
+            <div class="category-card" onclick="selectCategory('fashion')">
+                <div class="category-icon">👕</div>
+                <h3>Fashion</h3>
+                <p>Clothing and accessories</p>
+            </div>
+            
+            <div class="category-card" onclick="selectCategory('home')">
+                <div class="category-icon">🏠</div>
+                <h3>Home & Garden</h3>
+                <p>Everything for your home</p>
+            </div>
+            
+            <div class="category-card" onclick="selectCategory('books')">
+                <div class="category-icon">📚</div>
+                <h3>Books</h3>
+                <p>Physical and digital books</p>
+            </div>
+            
+            <div class="category-card" onclick="selectCategory('sports')">
+                <div class="category-icon">⚽</div>
+                <h3>Sports</h3>
+                <p>Sports and outdoor gear</p>
+            </div>
+            
+            <div class="category-card" onclick="selectCategory('beauty')">
+                <div class="category-icon">💄</div>
+                <h3>Beauty</h3>
+                <p>Health and beauty products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section class="deals" id="deals">
+        <h2>Today's Best Deals</h2>
+        <div class="deals-grid">
+            <div class="deal-card" onclick="viewProduct('laptop')">
+                <div class="deal-image">💻</div>
+                <div class="deal-info">
+                    <div class="deal-title">Premium Laptop - High Performance</div>
+                    <div class="deal-price">
+                        <span class="current-price">$899.99</span>
+                        <span class="original-price">$1,299.99</span>
+                        <span class="discount">31% off</span>
+                    </div>
+                    <div class="deal-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>(2,458)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deal-card" onclick="viewProduct('headphones')">
+                <div class="deal-image">🎧</div>
+                <div class="deal-info">
+                    <div class="deal-title">Wireless Bluetooth Headphones</div>
+                    <div class="deal-price">
+                        <span class="current-price">$79.99</span>
+                        <span class="original-price">$149.99</span>
+                        <span class="discount">47% off</span>
+                    </div>
+                    <div class="deal-rating">
+                        <span class="stars">★★★★★</span>
+                        <span>(15,672)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deal-card" onclick="viewProduct('watch')">
+                <div class="deal-image">⌚</div>
+                <div class="deal-info">
+                    <div class="deal-title">Smart Watch - Fitness Tracker</div>
+                    <div class="deal-price">
+                        <span class="current-price">$199.99</span>
+                        <span class="original-price">$299.99</span>
+                        <span class="discount">33% off</span>
+                    </div>
+                    <div class="deal-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>(8,934)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deal-card" onclick="viewProduct('phone')">
+                <div class="deal-image">📱</div>
+                <div class="deal-info">
+                    <div class="deal-title">Smartphone - Latest Model</div>
+                    <div class="deal-price">
+                        <span class="current-price">$699.99</span>
+                        <span class="original-price">$899.99</span>
+                        <span class="discount">22% off</span>
+                    </div>
+                    <div class="deal-rating">
+                        <span class="stars">★★★★★</span>
+                        <span>(23,156)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Amaazoon</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amaazoon Devices</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="#">Sell products on Amaazoon</a></li>
+                    <li><a href="#">Sell on Amaazoon Business</a></li>
+                    <li><a href="#">Sell apps on Amaazoon</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Amaazoon Payment Products</h3>
+                <ul>
+                    <li><a href="#">Amaazoon Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                    <li><a href="#">Amaazoon Currency Converter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Amaazoon and COVID-19</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Amaazoon.com, Inc. or its affiliates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
